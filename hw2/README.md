@@ -24,7 +24,7 @@
 попытайтесь запустить кластер - `sudo -u postgres pg_ctlcluster 13 main start`
 
 
-##Ответы на вопросы и *
+## Ответы на вопросы и *
 
 Попытка запустить кластер была неуспешной, так как нужно поменять значение параметра `data_directory в /etc/postgresql/12/main/postgresql.conf и указать там data_directory = '/mnt/data/12/main'`
 

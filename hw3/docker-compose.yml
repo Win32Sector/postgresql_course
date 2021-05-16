@@ -1,0 +1,25 @@
+version: '3.1'
+
+volumes:
+  pg_data:
+
+services:
+  pg_db:
+    container_name: pg_db
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+      - pg_data:/Users/mac/edu/postgresql_course/hw3/postgresql/data
+    ports:
+      - 5432:5432
+
+  pg_client:
+    container_name: pg_client
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    restart: always
